@@ -1,5 +1,19 @@
 Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
 
 # Poor practice 1
+The web service instance is in a public subnet. This increases it's exposure to attacks from the internet.
 
 # Poor practice 2
+The IAM role assigned to the EC2 instances grants full access to the S3 buckets. The web service only needs read access. In the event an EC2 node was compromised the attacker would have the ability to change, or delete the recipes.
+
+# Poor practice 3
+The attack simulation instance does not have any controls on the inbound connections. Anyone from the internet can try to SSH into the instance.
+
+# Poor practice 4
+The buckets can be accessed from the internet. 
+
+# Poor practice 5
+The buckets do not have encyption or versioning enabled. This makes the contents of the bucket vulnerable to unauthorized access and data loss.
+
+
+
