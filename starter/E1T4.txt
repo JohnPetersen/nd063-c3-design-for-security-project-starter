@@ -15,5 +15,3 @@ The buckets can be accessed from the internet.
 # Poor practice 5
 The buckets do not have encyption or versioning enabled. This makes the contents of the bucket vulnerable to unauthorized access and data loss.
 
-
-

@@ -1,3 +1,13 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+
+Vulnerability: Logging is not enabled on the S3 buckets.
+Recomended Remedy: Enable logging for the buckets by updating the c3-s3.yml file with a LoddingConfiguration in the S3Bucket properties.
+
+Vulnerability: VPS flow logs are not enabled.
+Recomended Remedy: Enable flow logs by updating the c3-app.yml file with a AWS::EC2::FlowLog resource.
+
+Vulnerability: Ports 20, 21 and 23 are open to the internet on the web service instance.
+Recomended Remedy: There is no reason for these ports to be open. Update the Cloudformation script so the security groups dissallow all traffic except for the needed ports.
