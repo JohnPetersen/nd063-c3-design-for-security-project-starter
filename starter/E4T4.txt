@@ -1,8 +1,12 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+Move the web service instance to a private subnet so it is not exposed to the internet.
 
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+The VPC endpoint will make it so access to S3 does not leave our VPC, however it depends where the users of the secrets buckets are.
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+No. Objects that are writen to the bucket after enabling encryption are encrypted.
 
 # What would happen if the original cloud formation templates are applied to this environment.
+They would reset the changes made manually. For example the bucket encryption setting would be reset.

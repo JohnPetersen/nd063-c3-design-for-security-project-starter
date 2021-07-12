@@ -38,4 +38,11 @@ aws s3 ls  s3://cand-c3-secret-recipes-787614237147/ --region us-east-1
 ### download the files
 aws s3 cp s3://cand-c3-secret-recipes-787614237147/secret_recipe.txt  .  --region us-east-1
 ### view contents of the file
-cat secret_recipe.txt
+cat secret_recipe.
+
+
+# Exercise 4
+
+## Connect to web service instance
+
+ssh -i ../recipe-vault-key.pem ubuntu@ec2-3-224-223-36.compute-1.amazonaws.com

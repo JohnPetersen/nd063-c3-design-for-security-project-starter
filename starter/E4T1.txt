@@ -1,5 +1,14 @@
-
-
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
+Change 1
+Disable password authentication for SSH. We are using keys for authentication.
+
+Change 2
+Move the web service instance to the private subnet and use either a bastion host or System Manager to access it. 
+
+Change 3
+If possible make the web service instance immutable and turn off SSH access entirely.
+
+
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+In the c3-app.yml CloudFormation script specify only the free recipe bucket rather than '*' for the instance role policy resource.
