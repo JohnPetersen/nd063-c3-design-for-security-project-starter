@@ -46,3 +46,6 @@ cat secret_recipe.
 ## Connect to web service instance
 
 ssh -i ../recipe-vault-key.pem ubuntu@ec2-3-224-223-36.compute-1.amazonaws.com
+
+
+aws cloudformation create-stack --region us-east-1 --stack-name c3-app --template-body file://starter/c3-app.yml --parameters ParameterKey=KeyPair,ParameterValue=recipe-vault-key.pem --capabilities CAPABILITY_IAM

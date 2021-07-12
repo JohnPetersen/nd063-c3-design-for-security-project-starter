@@ -1,13 +1,35 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
+- Checkov
+- TFLint
+- Terrafirma
+- CloudSploit
 
 ### Example vulnerability
+Example IaC vulnerabilies:
+- unsecured S3 buckets
+- hardcoded secrets
+- overly permissive firewall rules and IAM policies
+
 
 ##Scan AMI’s or containers for OS vulnerabilities
+- Amazon ECR
+- Docker Scan
+- Jfrog Xray
 
 ### Example vulnerability
+Image and container scaners are good for identifing files, libraries and system components with known vulnerabilities.
+
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
+- Prowler
+- Scout2
+- Fugue
+- CloudConformity
 
 ### Example vulnerability
+Insecure configurations such as:
+- An IAM role assigned a policy that allows admin access
+- Storage without encryption enabled
+- Keys that do not have a rotation schedule
